@@ -1,0 +1,89 @@
+
+<!-- ---- Form ------------>
+<!-- Name-->
+<!-- Tel-->
+<!-- Email-->
+<!-- Text-->
+<!-- Кнопка "отправить" и согласие-->
+<!-- шаблон прогресс-бара-->
+<!-- карточка партнера--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content=""><!--favicon-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--favicon end-->
+    <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <p>Header</p>
+      </header>
+      <main>
+        <div class="data-table">
+          <div class="data-table__container">
+            <div class="data-table__header">
+              <input class="data-table__header-search" placeholder="Поиск">
+            </div>
+            <nav class="data-table__nav">
+              <div class="data-table__nav-title">Меню</div>
+              <ul class="data-table__nav-list">
+                <li class="data-table__nav-item"><a class="data-table__nav-link" href="##">Пункт 1</a></li>
+                <li class="data-table__nav-item"><a class="data-table__nav-link" href="##">Пункт 2</a></li>
+                <li class="data-table__nav-item"><a class="data-table__nav-link" href="##">Пункт 3</a></li>
+                <li class="data-table__nav-item"><a class="data-table__nav-link" href="##">Пункт 4</a></li>
+              </ul>
+            </nav>
+            <div class="data-table__main">
+              <form class="data-form" method="POST">
+                <div class="data-form__content">
+                  <div class="data-form__header"><span class="data-form__header-title">ФИО</span><span class="data-form__header-title">Должность</span><span class="data-form__header-title">Возраст</span><span class="data-form__header-title">Компетенции</span></div>
+                </div>
+                <!--paste data-form-item-->
+                <div class="data-form__buttons">
+                  <button class="button data-form__buttons-submit" type="submit">Отправить</button>
+                  <button class="button data-form__buttons-add" type="button">Добавить</button>
+                </div>
+                <template class="data-form-item-template">
+                  <fieldset class="data-form__item">
+                    <div class="data-form__item-field-wrapper">
+                      <input class="data-form__item-field data-form__item-field--name" name="ФИО" minlength="3" maxlength="30" required placeholder=" "><span class="data-form__item-field-error">Не менее 3 символов</span>
+                    </div>
+                    <div class="data-form__item-field-wrapper">
+                      <select class="data-form__item-field data-form__item-field--post" name="Должность" required>
+                        <option value="Не выбрано" selected>Выбрать</option>
+                        <option value="Аналитик">Аналитик</option>
+                        <option value="Менеджер">Менеджер</option>
+                        <option value="Программист">Программист</option>
+                        <option value="Юрист">Юрист</option>
+                      </select>
+                    </div>
+                    <div class="data-form__item-field-wrapper">
+                      <input class="data-form__item-field data-form__item-field--age" name="Возраст" maxlength="2" placeholder="__" required pattern="[0-9]{2}"><span class="data-form__item-field-error">Введите двухзначный возраст</span>
+                    </div>
+                    <div class="data-form__item-field-wrapper">
+                      <textarea class="data-form__item-field data-form__item-field--text" name="Компетенции" rows="4"></textarea>
+                    </div>
+                    <button class="data-form__item-delete button" type="button" title="Удалить"></button>
+                  </fieldset>
+                </template>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p>Footer</p>
+      </footer>
+    </div>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>
