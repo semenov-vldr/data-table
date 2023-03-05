@@ -1,0 +1,107 @@
+.data-form
+  margin: 5% auto
+  width: 100%
+  max-width: 75%
+  min-width: 750px
+
+  &__content
+    min-height: 500px
+    border: 1px solid #303234
+    margin-bottom: 24px
+    border-radius: 8px
+
+  &__header
+    display: grid
+    grid-template-columns: 200px 200px 200px 1fr
+    height: fit-content
+    grid-column: 1/-1
+
+    &-title
+      text-align: center
+      padding: 12px
+      border-bottom: 1px solid #000
+    &-title:not(:last-child)
+      border-right: 1px solid #000
+
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 16px
+
+
+  &__item
+    position: relative
+    grid-column: 1/-1
+    display: grid
+    grid-template-columns: 200px 200px 200px 1fr
+    height: fit-content
+    border: none
+    border-bottom: 1px solid #000
+
+    &-field-wrapper
+      padding: 16px 12px 32px
+      border-right: 1px solid #000
+    &-field-wrapper:last-child
+      border-right: red
+
+    &-field
+      width: 100%
+      padding: 2px 8px
+      min-height: 30px
+      height: fit-content
+      border: 1px solid #000
+      &:focus
+        outline: none
+        border: 1px solid #000
+      &:required:valid
+        border-color: green
+      &:required:invalid
+        border-color: red
+      &:required:invalid + .data-form__item-field-error
+        display: block
+      &:required:invalid:placeholder-shown
+        border: 1px solid #000
+      &:required:invalid:placeholder-shown + .data-form__item-field-error
+        display: none
+
+    &-field--text
+      resize: none
+
+    &-field-error
+      display: none
+      font-size: 10px
+      color: red
+
+
+    &-delete
+      position: absolute
+      width: 50px
+      height: 30px
+      right: -20px
+      top: 50%
+      transform: translate(100%, -50%)
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      &::after
+        display: inline-block
+        content: ""
+        width: 80%
+        height: 3px
+        border-radius: 2px
+        background-color: #fff
+
+
+  .button
+    cursor: pointer
+    padding: 4px 12px
+    border-radius: 8px
+    font-size: 18px
+    background-color: #55697A
+    color: #fff
+    transition: 0.3s
+    &:hover
+      opacity: 0.8
+

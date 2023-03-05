@@ -1,0 +1,45 @@
+.data-table
+  height: 100%
+
+  &__container
+    display: grid
+    grid-template-columns: 200px 1fr
+
+  &__header
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 50px
+    padding: 16px
+    grid-column: 2/-1
+    background-color: #E8E4D1
+
+  &__header-search
+    padding: 4px 8px
+
+  &__nav
+    padding: 100px 16px
+    grid-column: 1/2
+    grid-row: 1/3
+    background-color: #55697A
+    color: #FFF3DB
+    &-title
+      font-size: 24px
+      font-weight: 500
+      border-bottom: 1px solid currentColor
+      margin-bottom: 16px
+    &-list
+      display: flex
+      flex-direction: column
+      gap: 8px
+      list-style-type: disc
+      padding-left: 24px
+    &-link
+      &:hover
+        text-decoration: underline
+
+  &__main
+    grid-column: 2/-1
+    border-bottom: 1px solid black
+
+

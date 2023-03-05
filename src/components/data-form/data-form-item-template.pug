@@ -1,0 +1,18 @@
+template.data-form-item-template
+  fieldset.data-form__item
+    .data-form__item-field-wrapper
+      input.data-form__item-field.data-form__item-field--name(name="ФИО" minlength="3" maxlength="30" required placeholder=" ")
+      span.data-form__item-field-error Не менее 3 символов
+    .data-form__item-field-wrapper
+      select.data-form__item-field.data-form__item-field--post(name="Должность" required)
+        option(value="Не выбрано" selected) Выбрать
+        option(value="Аналитик") Аналитик
+        option(value="Менеджер") Менеджер
+        option(value="Программист") Программист
+        option(value="Юрист") Юрист
+    .data-form__item-field-wrapper
+      input.data-form__item-field.data-form__item-field--age(name="Возраст" maxlength="2" placeholder="__" required pattern="[0-9]{2}")
+      span.data-form__item-field-error Введите двухзначный возраст
+    .data-form__item-field-wrapper
+      textarea.data-form__item-field.data-form__item-field--text(name="Компетенции" rows="4")
+    button.data-form__item-delete.button(type="button" title="Удалить")

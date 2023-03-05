@@ -1,0 +1,15 @@
+form.data-form(method="POST")
+  .data-form__content
+    .data-form__header
+      span.data-form__header-title ФИО
+      span.data-form__header-title Должность
+      span.data-form__header-title Возраст
+      span.data-form__header-title Компетенции
+
+  //paste data-form-item
+
+  .data-form__buttons
+    button.button.data-form__buttons-submit(type="submit") Отправить
+    button.button.data-form__buttons-add(type="button") Добавить
+
+  include data-form-item-template
