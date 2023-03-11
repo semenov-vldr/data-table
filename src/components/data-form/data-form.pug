@@ -1,4 +1,4 @@
-form.data-form(method="POST")
+form.data-form(action="" method="POST" enctype="multipart/form-data")
   .data-form__content
     .data-form__header
       span.data-form__header-title ФИО
@@ -7,9 +7,10 @@ form.data-form(method="POST")
       span.data-form__header-title Компетенции
 
   //paste data-form-item
+  include data-form-item-template
 
   .data-form__buttons
     button.button.data-form__buttons-submit(type="submit") Отправить
     button.button.data-form__buttons-add(type="button") Добавить
 
-  include data-form-item-template
+

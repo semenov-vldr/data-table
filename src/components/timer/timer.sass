@@ -1,0 +1,40 @@
+.timer
+  margin-top: 100px
+
+  &__container
+    display: flex
+    gap: 16px
+    justify-content: center
+
+  &__value
+    display: flex
+    gap: 8px
+    align-items: flex-end
+    input
+      border: none
+      outline: none
+      border-bottom: 2px solid currentColor
+      text-align: center
+      font-size: 32px
+      font-weight: 500
+      color: #55697a
+      width: 80px
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+        -moz-appearance: textfield
+
+  button
+    background-color: #55697a
+    color: #fff
+    padding: 4px 8px
+    border-radius: 8px
+    cursor: pointer
+    transition: $transition
+    &:hover
+      opacity: 0.8
+    &:disabled
+      opacity: 0.6
+      cursor: auto
+

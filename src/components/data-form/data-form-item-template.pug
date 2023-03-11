@@ -11,8 +11,8 @@ template.data-form-item-template
         option(value="Программист") Программист
         option(value="Юрист") Юрист
     .data-form__item-field-wrapper
-      input.data-form__item-field.data-form__item-field--age(name="Возраст" maxlength="2" placeholder="__" required pattern="[0-9]{2}")
-      span.data-form__item-field-error Введите двухзначный возраст
+      input.data-form__item-field.data-form__item-field--age(name="Возраст" maxlength="2" placeholder="__" required pattern="[1-9]{1}[0-9]{1}")
+      span.data-form__item-field-error Неверный возраст
     .data-form__item-field-wrapper
       textarea.data-form__item-field.data-form__item-field--text(name="Компетенции" rows="4")
     button.data-form__item-delete.button(type="button" title="Удалить")
