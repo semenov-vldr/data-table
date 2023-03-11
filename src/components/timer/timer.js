@@ -2,6 +2,8 @@ const timer = document.querySelector('.timer');
 
 if (timer) {
 
+const timerFields = timer.querySelectorAll('.timer__value input');
+
 const hour = timer.querySelector('.timer__hour input');
 const minute = timer.querySelector('.timer__min input');
 const second = timer.querySelector('.timer__sec input');
@@ -11,10 +13,21 @@ const resetBtn = timer.querySelector('.timer__reset');
 
 let interval;
 
+function sliceValue () {
+  if (this.value.length > 2) {
+    this.value = this.value.slice(0, 2);
+  }
+}
 
-  startBtn.addEventListener('click', (evt) => {
+  timerFields.forEach(timerField => {
+    timerField.addEventListener('keydown', sliceValue);
+    timerField.addEventListener('keyup', sliceValue);
+  });
+
+
+
+  timer.addEventListener('submit', (evt) => {
     evt.preventDefault();
-    startBtn.disabled = true;
     startTimer();
   });
 
@@ -22,6 +35,10 @@ let interval;
 
   function startTimer () {
     second.readOnly = true;
+    minute.readOnly = true;
+    hour.readOnly = true;
+    startBtn.disabled = true;
+
 
     function countdown () {
       const minMaxMinute = minute.value > 0 && minute.value < 60;
@@ -71,19 +88,18 @@ let interval;
     }
     interval = setInterval(countdown,1000);
 
-
   }
-
 
 
   function clearTimer () {
     clearInterval(interval);
     startBtn.disabled = false;
     second.readOnly = false;
+    minute.readOnly = false;
+    hour.readOnly = false;
   }
 
   pauseBtn.addEventListener('click', clearTimer);
-
 
 
   function resetTimer () {
