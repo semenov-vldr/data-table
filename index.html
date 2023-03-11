@@ -1,12 +1,4 @@
-
-<!-- ---- Form ------------>
-<!-- Name-->
-<!-- Tel-->
-<!-- Email-->
-<!-- Text-->
-<!-- Кнопка "отправить" и согласие-->
-<!-- шаблон прогресс-бара-->
-<!-- карточка партнера--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -42,15 +34,11 @@
               </ul>
             </nav>
             <div class="data-table__main">
-              <form class="data-form" method="POST">
+              <form class="data-form" action="" method="POST" enctype="multipart/form-data">
                 <div class="data-form__content">
                   <div class="data-form__header"><span class="data-form__header-title">ФИО</span><span class="data-form__header-title">Должность</span><span class="data-form__header-title">Возраст</span><span class="data-form__header-title">Компетенции</span></div>
                 </div>
                 <!--paste data-form-item-->
-                <div class="data-form__buttons">
-                  <button class="button data-form__buttons-submit" type="submit">Отправить</button>
-                  <button class="button data-form__buttons-add" type="button">Добавить</button>
-                </div>
                 <template class="data-form-item-template">
                   <fieldset class="data-form__item">
                     <div class="data-form__item-field-wrapper">
@@ -66,7 +54,7 @@
                       </select>
                     </div>
                     <div class="data-form__item-field-wrapper">
-                      <input class="data-form__item-field data-form__item-field--age" name="Возраст" maxlength="2" placeholder="__" required pattern="[0-9]{2}"><span class="data-form__item-field-error">Введите двухзначный возраст</span>
+                      <input class="data-form__item-field data-form__item-field--age" name="Возраст" maxlength="2" placeholder="__" required pattern="[1-9]{1}[0-9]{1}"><span class="data-form__item-field-error">Неверный возраст</span>
                     </div>
                     <div class="data-form__item-field-wrapper">
                       <textarea class="data-form__item-field data-form__item-field--text" name="Компетенции" rows="4"></textarea>
@@ -74,6 +62,10 @@
                     <button class="data-form__item-delete button" type="button" title="Удалить"></button>
                   </fieldset>
                 </template>
+                <div class="data-form__buttons">
+                  <button class="button data-form__buttons-submit" type="submit">Отправить</button>
+                  <button class="button data-form__buttons-add" type="button">Добавить</button>
+                </div>
               </form>
             </div>
           </div>
