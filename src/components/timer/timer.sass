@@ -5,6 +5,7 @@
     display: flex
     gap: 16px
     justify-content: center
+    flex-wrap: wrap
 
   &__value
     display: flex
@@ -24,6 +25,9 @@
         -webkit-appearance: none
         margin: 0
         -moz-appearance: textfield
+      @media (max-width: 768px)
+        font-size: 24px
+        width: 50px
 
   button
     background-color: #55697a
