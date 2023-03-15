@@ -24,6 +24,10 @@ module.exports = function () {
       $.gulp.series("pug", "reload")
     );
     $.gulp.watch(
+      $.path.src + "/php/**/*.php",
+      $.gulp.series("php:dev", "reload")
+    );
+    $.gulp.watch(
       $.path.src + "/libs/**/*.css",
       $.gulp.series("style:libs:dev", "reload")
     );

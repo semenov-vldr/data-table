@@ -1,7 +1,7 @@
 template.data-form-item-template
   fieldset.data-form__item
     .data-form__item-field-wrapper
-      input.data-form__item-field.data-form__item-field--name(name="ФИО" minlength="3" maxlength="30" required placeholder=" ")
+      input.data-form__item-field.data-form__item-field--name(name="ФИО" minlength="3" maxlength="30" required placeholder=" " autocomplete="off")
       span.data-form__item-field-error Не менее 3 символов
     .data-form__item-field-wrapper
       select.data-form__item-field.data-form__item-field--post(name="Должность" required)
@@ -11,8 +11,8 @@ template.data-form-item-template
         option(value="Программист") Программист
         option(value="Юрист") Юрист
     .data-form__item-field-wrapper
-      input.data-form__item-field.data-form__item-field--age(name="Возраст" maxlength="2" placeholder="__" required pattern="[1-9]{1}[0-9]{1}")
+      input.data-form__item-field.data-form__item-field--age(name="Возраст" maxlength="2" placeholder="__" required pattern="[1-9]{1}[0-9]{1}" autocomplete="off")
       span.data-form__item-field-error Неверный возраст
     .data-form__item-field-wrapper
-      textarea.data-form__item-field.data-form__item-field--text(name="Компетенции" rows="4")
+      textarea.data-form__item-field.data-form__item-field--text(name="Компетенции" rows="4" autocomplete="off")
     button.data-form__item-delete.button(type="button" title="Удалить")

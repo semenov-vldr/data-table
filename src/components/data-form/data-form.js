@@ -29,7 +29,7 @@ if (dataForm) {
       formItemList.forEach(formItem => {
         const { elements } = formItem;
         const objData = {};
-        const data = Array.from(elements)
+        Array.from(elements)
           .filter(item => !!item.name)
           .map(element => {
             const { name, value } = element;
@@ -37,28 +37,31 @@ if (dataForm) {
           });
         arrData.push(objData);
         console.log(JSON.stringify(arrData));
-        return arrData;
-      })
+      });
+      return arrData;
     }
 
     function handleFormSubmit(evt) {
       evt.preventDefault();
       const obj = serializeForm();
-      sendDataForm(obj)
+      console.log(obj);
+      sendDataForm(obj);
     }
 
+
     function sendDataForm (obj) {
-      const url = 'assets/php/index.php';
+      const url = '/assets/php/post.php';
       fetch(url, {
         method: "POST",
-        body: 'json=' + JSON.stringify(obj),
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type' : "application/json",
-        },
-      }).then((responce) => responce.json())
-        .then((json) => console.log(json))
-        .finally();
+        body: JSON.stringify(obj),
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+
+      })
+        .then(responce => responce.text())
+        .then(function(resp) {
+          document.querySelector('.message').textContent = resp;
+        })
+        .catch(error => console.error(error));
     }
 
     dataForm.addEventListener('submit', handleFormSubmit);
