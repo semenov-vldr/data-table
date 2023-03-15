@@ -42,7 +42,7 @@
                 <template class="data-form-item-template">
                   <fieldset class="data-form__item">
                     <div class="data-form__item-field-wrapper">
-                      <input class="data-form__item-field data-form__item-field--name" name="ФИО" minlength="3" maxlength="30" required placeholder=" "><span class="data-form__item-field-error">Не менее 3 символов</span>
+                      <input class="data-form__item-field data-form__item-field--name" name="ФИО" minlength="3" maxlength="30" required placeholder=" " autocomplete="off"><span class="data-form__item-field-error">Не менее 3 символов</span>
                     </div>
                     <div class="data-form__item-field-wrapper">
                       <select class="data-form__item-field data-form__item-field--post" name="Должность" required>
@@ -54,10 +54,10 @@
                       </select>
                     </div>
                     <div class="data-form__item-field-wrapper">
-                      <input class="data-form__item-field data-form__item-field--age" name="Возраст" maxlength="2" placeholder="__" required pattern="[1-9]{1}[0-9]{1}"><span class="data-form__item-field-error">Неверный возраст</span>
+                      <input class="data-form__item-field data-form__item-field--age" name="Возраст" maxlength="2" placeholder="__" required pattern="[1-9]{1}[0-9]{1}" autocomplete="off"><span class="data-form__item-field-error">Неверный возраст</span>
                     </div>
                     <div class="data-form__item-field-wrapper">
-                      <textarea class="data-form__item-field data-form__item-field--text" name="Компетенции" rows="4"></textarea>
+                      <textarea class="data-form__item-field data-form__item-field--text" name="Компетенции" rows="4" autocomplete="off"></textarea>
                     </div>
                     <button class="data-form__item-delete button" type="button" title="Удалить"></button>
                   </fieldset>
@@ -66,6 +66,7 @@
                   <button class="button data-form__buttons-submit" type="submit">Отправить</button>
                   <button class="button data-form__buttons-add" type="button">Добавить</button>
                 </div>
+                <p class="message"></p>
               </form>
             </div>
           </div>
