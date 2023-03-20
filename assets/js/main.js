@@ -45,8 +45,8 @@ if (dataForm) {
     function handleFormSubmit(evt) {
       evt.preventDefault();
       const obj = serializeForm();
-      console.log(obj);
       sendDataForm(obj);
+      dataForm.reset();
     }
 
 
@@ -66,9 +66,5 @@ if (dataForm) {
     }
 
     dataForm.addEventListener('submit', handleFormSubmit);
-
-
-
-
 
   }

@@ -4,7 +4,8 @@
 
     $json = json_decode($data, true);
 
-    (json_last_error() === JSON_ERROR_NONE) ? print_r ("True") : print_r ("False");
+    $error = json_last_error();
 
+    ($error === JSON_ERROR_NONE) ? print_r ("True") : print_r ("False");
 
 ?>
